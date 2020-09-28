@@ -17,3 +17,32 @@ const toggleSwitch = () => ({ type: TOGGLE_SWITCH });
 const increment = diff => ({ type: INCREMENT, diff });
 const decrement = () => ({ type: DECREMENT });
 
+// 초깃값 설정
+const initialState = {
+  light: false,
+  counter: 0,
+};
+
+function reducer(state = initialState, action) {
+  switch (action.type) {
+    case TOGGLE_SWITCH:
+      return {
+        ...state,
+        light: !state.light,
+      };
+    case INCREMENT:
+      return {
+        ...state,
+        counter: state.counter + action.diff,
+      };
+    case DECREMENT:
+      return {
+        ...state,
+        counter: state.counter - 1,
+      };
+    default:
+      return state;
+  }
+}
+
+
