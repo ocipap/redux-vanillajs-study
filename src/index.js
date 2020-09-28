@@ -66,5 +66,11 @@ const render = () => {
 
 render();
 
+store.subscribe(render);
+
+$switch.addEventListener('click', () => store.dispatch(toggleSwitch()));
+$plus.addEventListener('click', () => store.dispatch(increment(5)));
+$minus.addEventListener('click', () => store.dispatch(decrement()));
+
 
 
