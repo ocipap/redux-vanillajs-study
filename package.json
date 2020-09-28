@@ -1,0 +1,23 @@
+{
+  "name": "redux-vanillajs-study",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ocipap/redux-vanillajs-study.git"
+  },
+  "author": "papico",
+  "license": "MIT",
+  "homepage": "https://github.com/ocipap/redux-vanillajs-study#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "redux": "^4.0.5"
+  }
+}
