@@ -19,10 +19,11 @@ const decrement = () => ({ type: DECREMENT });
 
 // 초깃값 설정
 const initialState = {
-  light: false,
-  counter: 0,
+  light: true,
+  counter: 713,
 };
 
+// 리듀서 함수 정의
 function reducer(state = initialState, action) {
   switch (action.type) {
     case TOGGLE_SWITCH:
@@ -44,5 +45,26 @@ function reducer(state = initialState, action) {
       return state;
   }
 }
+
+// 스토어 생성
+const store = createStore(reducer);
+
+// redder 함수
+const render = () => {
+  const state = store.getState();
+  const { light, counter } = state;
+
+  if (light) {
+    $light.style.background = 'green';
+    $switch.innerText = '끄기';
+  } else {
+    $light.style.background = 'black';
+    $switch.innerText = '켜기';
+  }
+  $counter.innerText = counter;
+};
+
+render();
+
 
 
